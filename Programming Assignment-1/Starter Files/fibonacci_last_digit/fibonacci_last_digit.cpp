@@ -3,7 +3,9 @@
 int get_fibonacci_last_digit(int n) {
 	//write your code here
 	int a =0, b=1, c;
-	for(int i=0;i<n;i++){
+	if(n<=1)
+		return n;
+	for(int i=2;i<=n;i++){
 		c = (a+b)%10;
 		a = b;
 		b = c;
