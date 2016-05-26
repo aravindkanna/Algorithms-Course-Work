@@ -2,10 +2,15 @@
 #include <iostream>
 #include <vector>
 
-using std::vector;
+using namespace std;
+
+bool comp(int i, int j){
+  return (i>j);
+}
 
 long long min_dot_product(vector<int> a, vector<int> b) {
-  // write your code here
+  sort(a.begin(), a.end());
+  sort(b.begin(), b.end(), comp);
   long long result = 0;
   for (size_t i = 0; i < a.size(); i++) {
     result += a[i] * b[i];
@@ -15,13 +20,13 @@ long long min_dot_product(vector<int> a, vector<int> b) {
 
 int main() {
   size_t n;
-  std::cin >> n;
+  cin >> n;
   vector<int> a(n), b(n);
   for (size_t i = 0; i < n; i++) {
-    std::cin >> a[i];
+    cin >> a[i];
   }
   for (size_t i = 0; i < n; i++) {
-    std::cin >> b[i];
+    cin >> b[i];
   }
-  std::cout << min_dot_product(a, b) << std::endl;
+  cout << min_dot_product(a, b) << endl;
 }
