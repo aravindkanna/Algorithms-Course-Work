@@ -9,6 +9,9 @@ bool comp(int i, int j){
 }
 
 long long min_dot_product(vector<int> a, vector<int> b) {
+  if(!a.size()){
+    return  0;
+  }
   sort(a.begin(), a.end());
   sort(b.begin(), b.end(), comp);
   long long result = 0;
