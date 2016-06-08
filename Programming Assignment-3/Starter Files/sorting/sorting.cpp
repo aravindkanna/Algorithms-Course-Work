@@ -1,8 +1,24 @@
 #include <iostream>
 #include <vector>
+#include <stdlib.h>
 
 using std::vector;
 using std::swap;
+using namespace std;
+
+int partition3(vector<int> &a, int l, int r) {
+  int pivot = a[l];
+  int j = l;
+
+  for(int i = l + 1;i <= r;i++) {
+    if(a[i] < pivot){
+      j++;
+      swap(a[i], a[j]);
+    }
+  }
+  swap(a[l], a[j]);
+  return j;
+}
 
 int partition2(vector<int> &a, int l, int r) {
   int x = a[l];
@@ -24,9 +40,17 @@ void randomized_quick_sort(vector<int> &a, int l, int r) {
 
   int k = l + rand() % (r - l + 1);
   swap(a[l], a[k]);
-  int m = partition2(a, l, r);
+  int m = partition3(a, l, r);
 
   randomized_quick_sort(a, l, m - 1);
+  for(int i = m + 1;i <= r;i++){
+    if(a[i] == a[m]){
+      m++;
+    }
+    else{
+      break;
+    }
+  }
   randomized_quick_sort(a, m + 1, r);
 }
 
