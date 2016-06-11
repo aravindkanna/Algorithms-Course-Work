@@ -8,19 +8,22 @@ using std::cout;
 
 long long int MaxPairwiseProduct(const vector<int>& numbers) {
   long long int result = 0;
-  int n = numbers.size();
-  int max_ind=-1, min_ind=-1;
-  for(int i=0;i<n;i++){
-    if(max_ind==-1 || (numbers[i] > numbers[max_ind])){
-      max_ind=i;
+  int size = numbers.size();
+  int max_ind = -1, second_max_ind = -1;
+
+  for(int i = 0;i < size;i++){
+    if(numbers[i] > numbers[max_ind]){
+      max_ind = i;
     }
   }
-  for(int i=0;i<n;i++){
-    if((i!=max_ind) && (min_ind==-1 || numbers[i] > numbers[min_ind]) ){
-      min_ind=i;
+
+  for(int i = 0;i < size;i++){
+    if(i != max_ind && numbers[i] > numbers[second_max_ind]){
+      second_max_ind = i;
     }
   }
-  return numbers[max_ind]*numbers[min_ind];
+
+  return (long long )numbers[max_ind] * (long long )numbers[second_max_ind];
 }
 
 int main() {

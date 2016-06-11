@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<iq id="fsif2-48" type="set">
+   <query xmlns="tribe:protocol:room" action="create_group">
+      <room>
+         <name>duck</name>
+         <owners>
+            <user>
+               <user_id>919652570018</user_id>
+               <full_name>duck</full_name>
+            </user>
+         </owners>
+         <members>
+            <user>
+               <user_id>918897041840</user_id>
+               <full_name>Madjavan</full_name>
+            </user>
+            <user>
+               <user_id>919652570018</user_id>
+               <full_name>duck</full_name>
+            </user>
+         </members>
+      </room>
+   </query>
+</iq>
