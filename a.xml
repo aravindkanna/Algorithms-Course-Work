@@ -1,3 +1,4 @@
+request
 <?xml version="1.0" encoding="UTF-8"?>
 <iq id="fsif2-48" type="set">
    <query xmlns="tribe:protocol:room" action="create_group">
@@ -22,3 +23,69 @@
       </room>
    </query>
 </iq>
+
+request
+<?xml version="1.0" encoding="UTF-8"?>
+<iq id="fsif2-46" type="get">
+   <query xmlns="tribe:protocol:user" action="registered_users">
+      <user_id>9652063017</user_id>
+      <user_id>918790072977</user_id>
+      <user_id>9948191395</user_id>
+      <user_id>918897041840</user_id>
+   </query>
+</iq<name />
+
+<?xml version="1.0" encoding="UTF-8"?>
+<iq id="fsif2-50" type="set">
+   <query xmlns="tribe:protocol:room" action="create_fork">
+      org.jivesoftware.smack.packet.StandardExtensionElement@42360678
+   </query>
+</iq>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="tribe:protocol:room" action="create_group">
+   <room>
+      <name>duck</name>
+      <owners>
+         <user>
+            <user_id>919652570018</user_id>
+            <full_name>duck</full_name>
+         </user>
+      </owners>
+      <members>
+         <user>
+            <user_id>918897041840</user_id>
+            <full_name>Madjavan</full_name>
+         </user>
+         <user>
+            <user_id>919652570018</user_id>
+            <full_name>duck</full_name>
+         </user>
+      </members>
+   </room>
+</query<name />
+
+<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns="tribe:protocol:room" action="create_fork">
+   <room>
+      <name>chill</name>
+      <type>secret</type>
+      <parent_room_id>459ae07cfe91c6bbf9fbc07544a30705</parent_room_id>
+      <owners>
+         <user>
+            <user_id>919652570018</user_id>
+            <full_name>duck</full_name>
+         </user>
+      </owners>
+      <members>
+         <user>
+            <user_id>9652063017</user_id>
+            <full_name>Sunil</full_name>
+         </user>
+         <user>
+            <user_id>919652570018</user_id>
+            <full_name>duck</full_name>
+         </user>
+      </members>
+   </room>
+</query>
